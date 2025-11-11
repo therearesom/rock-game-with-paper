@@ -24,27 +24,26 @@ fn game (computer: u32, person: u32) -> u32 {
 
 
 fn main() {
-    let mut outcome: u32 = 3;
-    let mut n: u32 = 1;
     println!("Let's play rock, paper, scissors!");
     println!("Enter your choice and press enter. (rock -> 1, paper -> 2, scissors -> 3)");
     
+    let person: u32 = 2;
 
 
+    println!("Computer played {}.", computer_output());
+    println!("Game output is {}.", game(computer_output(), person));
 
-
-    
-
-    if outcome == 0 {
+    if game(computer_output(), person) == 0 {
         println!("Computer wins!");
     }
-    else if outcome == 1 {
+    else if game(computer_output(), person) == 1 {
         println!("Draw!");
     }
-    else if outcome == 2 {
+    else if game(computer_output(), person) == 2 {
         println!("Player wins!");
     }
     else {
         println!("Enter a valid number.");
     }
+
 }

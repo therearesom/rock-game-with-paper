@@ -18,8 +18,8 @@ fn game (computer: u32, person: u32) -> u32 {
     }
     else {
         return 3;
-    }
-}
+    }       //whyyyy is there an error
+}           //if expression is mising a block after this condition?
 
 
 

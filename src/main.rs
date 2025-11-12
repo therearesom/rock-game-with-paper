@@ -1,5 +1,9 @@
+use rand::Rng;
+
+
 fn computer_output () -> u32 {
-    let n: u32 = 1;
+    let mut rng = rand::thread_rng();
+    let n: u32 = rng.gen_range(1..=3);
     n
 }
 
@@ -10,16 +14,16 @@ fn game (computer: u32, person: u32) -> u32 {
     if math == 0 {
         return 1;
     }
-    else if math == 2 || if math == -1 {
+    else if math == -2 || math == 1 {
         return 0;
     }
-    else if math == -2 || if math == 1 {
+    else if math == 2 || math == -1 {
         return 2;
     }
     else {
         return 3;
-    }       //whyyyy is there an error
-}           //if expression is mising a block after this condition?
+    }
+}
 
 
 
@@ -27,9 +31,9 @@ fn main() {
     println!("Let's play rock, paper, scissors!");
     println!("Enter your choice and press enter. (rock -> 1, paper -> 2, scissors -> 3)");
     
-    let person: u32 = 2;
+    let person: u32 = 2;    //paper
 
-
+    println!("You played {}.", person);
     println!("Computer played {}.", computer_output());
     println!("Game output is {}.", game(computer_output(), person));
 

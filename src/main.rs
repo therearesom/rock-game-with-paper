@@ -8,8 +8,7 @@ fn computer_output () -> u32 {
 }
 
 fn game (computer: u32, person: u32) -> u32 {
-    let mut math: i32 = 0;
-    math = computer as i32 - person as i32;
+    let math: i32 = computer as i32 - person as i32;
     match math {
         0 => return 1,
         1 | -2 => return 0,

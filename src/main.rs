@@ -9,19 +9,12 @@ fn computer_output () -> u32 {
 
 fn game (computer: u32, person: u32) -> u32 {
     let mut math: i32 = 0;
-    let mut outcome: u32 = 3;
     math = computer as i32 - person as i32;
-    if math == 0 {
-        return 1;
-    }
-    else if math == -2 || math == 1 {
-        return 0;
-    }
-    else if math == 2 || math == -1 {
-        return 2;
-    }
-    else {
-        return 3;
+    match math {
+        0 => return 1,
+        1 | -2 => return 0,
+        2 | -1 => return 2,
+        _ => return 3
     }
 }
 

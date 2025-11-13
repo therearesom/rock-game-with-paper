@@ -24,19 +24,20 @@ fn main() {
     println!("Let's play rock, paper, scissors!");
     println!("Enter your choice and press enter. (rock -> 1, paper -> 2, scissors -> 3)");
     
-    let person: u32 = 2;    //paper
+    let person: u32 = 3;    //paper
+    let computer: u32 = computer_output ();
 
     println!("You played {}.", person);
-    println!("Computer played {}.", computer_output());
-    println!("Game output is {}.", game(computer_output(), person));
+    println!("Computer played {}.", computer);
+    println!("Game output is {}.", game(computer, person));
 
-    if game(computer_output(), person) == 0 {
+    if game(computer, person) == 0 {
         println!("Computer wins!");
     }
-    else if game(computer_output(), person) == 1 {
+    else if game(computer, person) == 1 {
         println!("Draw!");
     }
-    else if game(computer_output(), person) == 2 {
+    else if game(computer, person) == 2 {
         println!("Player wins!");
     }
     else {
